@@ -1,2 +1,2 @@
 # JsBridge_example
-  https://github.com/lzyzsd/JsBridge
+  example from https://github.com/lzyzsd/JsBridge
