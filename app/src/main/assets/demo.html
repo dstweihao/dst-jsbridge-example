@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+
+<body style="background-color:antiquewhite;">
+HTML
+<p>
+    <input
+            type="button"
+            value="Call Android Method"
+            onclick="testClicked()"
+    />
+</p>
+<p style="width: 100%;">
+    <span id="show">Show Contents:</span>
+</p>
+</body>
+<script>
+    function testClicked() {
+      window.WebViewJavascriptBridge.callHandler(
+        "jsCallAndroid",
+        { name: "weihao" },
+        function(responseData) {
+          document.getElementById("show").innerHTML = responseData;
+        }
+      );
+    }
+    /**
+      这个库将把WebViewJavascriptBridge对象注入到窗口对象。
+      所以在您的js中，在使用WebViewJavascriptBridge之前，
+      必须检测WebViewJavascriptBridge是否存在。
+      如果WebViewJavascriptBridge未退出，
+      则可以侦听WebViewJavascriptBridgeReady事件
+    */
+    connectWebViewJavascriptBridge(function(bridge) {
+      bridge.init(function(message, responseCallback) {
+        if (responseCallback) {
+          responseCallback(data);
+        }
+      });
+      bridge.registerHandler("functionInJs", function(data, responseCallback) {
+        document.getElementById("show").innerHTML =
+          "params from Android：" + data;
+        if (responseCallback) {
+          var responseData = `{"nickname":"braveheart","age":"18","address":"China"}`;
+          responseCallback(responseData);
+        }
+      });
+    });
+    function connectWebViewJavascriptBridge(callback) {
+      if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge);
+      } else {
+        document.addEventListener(
+          "WebViewJavascriptBridgeReady",
+          function() {
+            callback(WebViewJavascriptBridge);
+          },
+          false
+        );
+      }
+    }
+  </script>
+</html>
