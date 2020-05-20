@@ -1,2 +1,2 @@
 # JsBridge_example
-  example from https://github.com/lzyzsd/JsBridge
+ Dependent library address is https://github.com/lzyzsd/JsBridge
