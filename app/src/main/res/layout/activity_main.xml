@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button
-        android:id="@+id/bt_calljs"
+        android:id="@+id/bt_call_js"
         app:layout_constraintTop_toBottomOf="@+id/tv_android"
         app:layout_constraintLeft_toLeftOf="@+id/tv_android"
         android:layout_width="wrap_content"
@@ -33,8 +33,8 @@
 
     <TextView
         android:id="@+id/tv_content"
-        app:layout_constraintTop_toBottomOf="@+id/bt_calljs"
-        app:layout_constraintLeft_toLeftOf="@+id/bt_calljs"
+        app:layout_constraintTop_toBottomOf="@+id/bt_call_js"
+        app:layout_constraintLeft_toLeftOf="@+id/bt_call_js"
         android:layout_width="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Content"

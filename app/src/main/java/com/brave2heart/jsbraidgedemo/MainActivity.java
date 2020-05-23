@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         bridgeWebview = (BridgeWebView)findViewById(R.id.bridgeWebview);
-        btCallJS = (Button)findViewById(R.id.bt_calljs);
+        btCallJS = (Button)findViewById(R.id.bt_call_js);
         tvContent = (TextView)findViewById(R.id.tv_content);
 
     }
