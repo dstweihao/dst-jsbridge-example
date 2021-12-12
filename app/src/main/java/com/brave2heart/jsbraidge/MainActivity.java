@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 tvContent.setText("params from JavaScript: " + data);
                 JSONObject jsonObject = new JSONObject();
                 try {
-                    jsonObject.put("nickname", "braveheart");
+                    jsonObject.put("nickname", "dstweihao");
                     jsonObject.put("age", "18");
                     jsonObject.put("address", "China");
                 } catch (JSONException e) {
