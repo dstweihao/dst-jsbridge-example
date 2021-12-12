@@ -1,4 +1,4 @@
-package com.brave2heart.jsbraidgedemo;
+package com.brave2heart.jsbraidge;
 
 import android.content.Context;
 
